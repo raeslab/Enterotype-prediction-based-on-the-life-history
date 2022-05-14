@@ -10,5 +10,13 @@ Memory: 31,0 GiB
 OS type: 64-bit
 
 ## Software requirements
-# R version 4.0.3 (2020-10-10)
+R version 4.0.3 (2020-10-10)
+R packages:
+* caret_6.0-86
+* DMwR_0.4.1
+* ROSE_0.0-4
+* psych_2.1.9
+* MLeval_0.3
+* pROC_1.17.0.1
+* mltools_0.3.5
 
