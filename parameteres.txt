@@ -1,0 +1,4 @@
+./CV_Data/All_years_Bact1_CV_40_SCALE_TRUE.RData	Bact1	5	All_years_Bact1_CV_40_SCALE_TRUE	1
+./CV_Data/All_years_Bact2_CV_40_SCALE_TRUE.RData	Bact2	5	All_years_Bact2_CV_40_SCALE_TRUE	1
+./CV_Data/All_years_Prev_CV_40_SCALE_TRUE.RData	Prev	5	All_years_Prev_CV_40_SCALE_TRUE	1
+./CV_Data/All_years_Rum_CV_40_SCALE_TRUE.RData	Rum	5	All_years_Rum_CV_40_SCALE_TRUE	1
