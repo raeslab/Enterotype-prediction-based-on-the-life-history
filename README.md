@@ -5,9 +5,9 @@ Machine learning classification pipe-line used for the study "Long-term life his
 
 ## Hardware requirements
 The pipe-line was designed to be run into Sun Grid Engine queuing cluster architecture (qsub script.sh), however, it can be run into a desktop computer but the for-loop implementation is extremely inefficient
-Processor: Intel® Core™ i7-7820HQ CPU @ 2.90GHz × 8
-Memory: 31,0 GiB
-OS type: 64-bit
+(Processor: Intel® Core™ i7-7820HQ CPU @ 2.90GHz × 8,
+Memory: 31 GiB,
+OS type: 64-bit)
 
 ## Software requirements
 ###### R version 4.0.3 (2020-10-10)
