@@ -4,7 +4,7 @@ Machine learning classification pipe-line used for the study "Long-term life his
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/jorgevazcast/Enterotype-prediction-based-on-the-life-history/blob/main/LICENSE)
 
 ## Hardware requirements
-The pipe-line was designed to be run into Sun Grid Engine queuing cluster architecture (qsub script.sh), however, it can be run into a desktop computer but the for-loop implementation is extremely inefficient
+The pipe-line is designed to be run into Sun Grid Engine queuing cluster architecture (qsub script.sh), however, it can be run into a desktop computer but the for-loop implementation is extremely inefficient
 (Processor: Intel® Core™ i7-7820HQ CPU @ 2.90GHz × 8,
 Memory: 31 GiB,
 OS type: 64-bit)
