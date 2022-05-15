@@ -37,7 +37,7 @@ fi
 
 ##########################################
 ######## Run into a for-loop     #########
-## IMPORTANT: The pipe-line was designed to be run as an executable script into a batch server (qsub script.sh), the for-loop example is extremely inefficient
+## IMPORTANT: The pipeline was designed to be run as an executable script into a batch server (qsub script.sh), the for-loop example is extremely inefficient
 filename='parameteres.txt'
 while read line; do
  Rscript --vanilla $nested_cross_validation_rf $line
