@@ -33,7 +33,7 @@ index=38 # num form 1 to 40
 
 Rscript --vanilla $nested_cross_validation_rf $outer_cv_path $ent $KfoldsInnerLoop $outdir $index # The script must be executed for all the 40 CV sub-datasets
 ```
-Run into a for-loop. IMPORTANT: The pipe-line was designed to be run as an executable script into a batch server (qsub script.sh), the for-loop example is extremely inefficient
+Run into a for loop. IMPORTANT: The pipeline was designed to be run as an executable script into a batch server (qsub script.sh), the for loop example is extremely inefficient
 ```
 filename='parameteres.txt'
 while read line; do
