@@ -20,3 +20,23 @@ R packages:
 * pROC_1.17.0.1
 * mltools_0.3.5
 
+## Run the pipeline
+Run a single CV 
+```
+nested_cross_validation_rf=./R/nested_cross_validation_rf.R
+outer_cv_path="./CV_Data/All_years_Rum_CV_40_SCALE_TRUE.RData"
+ent="Rum"  ### Enterotype to use 
+KfoldsInnerLoop=5 ### number of cv in the inner loop
+outdir="All_years_Rum_CV_40_SCALE_TRUE"
+index=38 # num form 1 to 40
+
+Rscript --vanilla $nested_cross_validation_rf $outer_cv_path $ent $KfoldsInnerLoop $outdir $index # The script must be executed for all the 40 CV sub-datasets
+```
+Run the 40-CV. IMPORTANT: The pipe-line was designed to be run as an executable script into a batch server (qsub script.sh), the for-loop example is extremely inefficient
+```
+filename='parameteres.txt'
+while read line; do
+ Rscript --vanilla $nested_cross_validation_rf $line
+done < $filename
+```
+
