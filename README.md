@@ -35,7 +35,7 @@ Rscript --vanilla $nested_cross_validation_rf $outer_cv_path $ent $KfoldsInnerLo
 ```
 Run into a for loop. IMPORTANT: The pipeline was designed to be run as an executable script into a batch server (qsub script.sh), the for loop example is extremely inefficient
 ```
-filename='parameteres.txt'
+filename='parameters.txt'
 while read line; do
  Rscript --vanilla $nested_cross_validation_rf $line
 done < $filename
