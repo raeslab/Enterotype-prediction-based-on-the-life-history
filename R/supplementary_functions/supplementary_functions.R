@@ -144,10 +144,6 @@ best_model_stats <- function(test_df, classifier_model, ent){
 	########     Estimate the AUC      ############
 	###############################################
 
-	# Data can be provided as response, predictor, where the predictor is the numeric (or ordered) level of the evaluated signal, and the response encodes the observation class (control or case). The level argument specifies which response level must be taken as controls (first value of level) or cases (second). It can safely be ignored when the response is encoded as 0 and 1, but it will frequently fail otherwise. By default, the first two values of levels(as.factor(response)) are taken, and the remaining levels are ignored. This means that if your response is coded “control” and “case”, the levels will be inverted.
-
-	# direction: in which direction to make the comparison? “auto” (default): automatically define in which group the median is higher and take the direction accordingly. “>”: if the predictor values for the control group are higher than the values of the case group (controls > t >= cases). “<”: if the predictor values for the control group are lower or equal than the values of the case group (controls < t <= cases). You should set this explicity to “>” or “<” whenever you are resampling or randomizing the data, otherwise the curves will be biased towards higher AUC values.
-
 	prediction <- predict(classifier_model, newdata = test_df, type="prob")
 	model.ROC <- roc(predictor=prediction[,ent], response=test_df$conditions, levels=(levels(test_df$conditions)))
 	AUC <-  model.ROC$auc[1]
@@ -196,10 +192,6 @@ outer_loop_cv_stats <- function(test_df, classifier_model, ent){
 	###############################################
 	########     Estimate the AUC      ############
 	###############################################
-
-	# Data can be provided as response, predictor, where the predictor is the numeric (or ordered) level of the evaluated signal, and the response encodes the observation class (control or case). The level argument specifies which response level must be taken as controls (first value of level) or cases (second). It can safely be ignored when the response is encoded as 0 and 1, but it will frequently fail otherwise. By default, the first two values of levels(as.factor(response)) are taken, and the remaining levels are ignored. This means that if your response is coded “control” and “case”, the levels will be inverted.
-
-	# direction: in which direction to make the comparison? “auto” (default): automatically define in which group the median is higher and take the direction accordingly. “>”: if the predictor values for the control group are higher than the values of the case group (controls > t >= cases). “<”: if the predictor values for the control group are lower or equal than the values of the case group (controls < t <= cases). You should set this explicity to “>” or “<” whenever you are resampling or randomizing the data, otherwise the curves will be biased towards higher AUC values.
 
 	prediction <- predict(classifier_model, newdata = test_df, type="prob")
 	model.ROC <- roc(predictor=prediction[,ent], response=test_df$conditions, levels=(levels(test_df$conditions)))
